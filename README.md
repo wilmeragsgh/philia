@@ -16,3 +16,21 @@ Healthy communication between co-workers provides great value for companies. How
 As we can imagine, this answer could make **worker 1** stress worse.
 
 It can be a better way, what if **worker 2**, has an assessment of its answer in terms of emotional load at the moment of sending it so it can double check how appropriate is its answer to the text (like a differential between the receive and answered message). Specifically a slack bot can be created to provide this assessment.
+
+## Development
+
+### Lint
+
+- black
+- isort
+- flake8
+
+### Local testing
+
+**Local Deployment**
+
+```bash
+# With all the slack-api/requirements.txt in place
+cd slack-api/
+chalice local
+```
