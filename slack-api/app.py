@@ -1,13 +1,13 @@
+import logging
 import os
 import re
 
-from dotenv import find_dotenv, load_dotenv
 # Use the package we installed
 from chalice import Chalice, Response
+from dotenv import find_dotenv, load_dotenv
 from slack_bolt import App
-from slack_bolt.adapter.aws_lambda.chalice_handler import ChaliceSlackRequestHandler
-
-
+from slack_bolt.adapter.aws_lambda.chalice_handler import \
+    ChaliceSlackRequestHandler
 
 load_dotenv(find_dotenv())
 
@@ -23,9 +23,10 @@ bolt_app = App(
 def respond_to_slack_within_3_seconds(ack):
     ack("one sec!")
 
+
 @bolt_app.message(re.compile("."))
 def say_some(message, say):
-    user = message['user']
+    user = message["user"]
     content = message["text"]
     print(message, flush=True)
     say(f"This *{content}* message is a little harsh, <@{user}>!")
@@ -56,5 +57,3 @@ def install() -> Response:
 @app.route("/slack/oauth_redirect", methods=["GET"])
 def oauth_redirect() -> Response:
     return slack_handler.handle(app.current_request)
-
-
