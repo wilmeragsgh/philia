@@ -34,3 +34,11 @@ It can be a better way, what if **worker 2**, has an assessment of its answer in
 cd slack-api/
 chalice local
 ```
+
+### Deployment
+
+```bash
+# With all the slack-api/requirements.txt in place
+cd slack-api/
+chalice deploy
+```
