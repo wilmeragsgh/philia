@@ -1,4 +1,8 @@
-# philia
+![Screenshot_from_2021-05-28_23-00-45-removebg-preview](https://user-images.githubusercontent.com/10764342/120056201-b7272780-c008-11eb-81a1-dccd1cfafff4.png)
+
+_You care, does your messages?_
+
+---
 A slack bot for keeping you from hurting a co-worker's feelings
 
 ## Problem
